@@ -1,0 +1,7 @@
+$layout-breakpoint-xs: 600px !default;
+
+@mixin bwc-media--gt-xs() {
+   @media (min-width: $layout-breakpoint-xs) {
+     @content;
+   }
+}

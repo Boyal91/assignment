@@ -1,0 +1,26 @@
+<div  class="form_container">
+    <form [formGroup]="questionForm" class="form_container__question">
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="poll question" formControlName="question">
+        </mat-form-field>
+    </form>
+    <div class="form_container">
+        <div class="form_container__form">
+            <form [formGroup]="pollOptionsForm">
+                <div formArrayName="pollOptions">
+                    <div *ngFor="let voteOption of pollOptionsValue.controls; let i=index" [formGroupName]="i">
+                        <mat-form-field appearance="legacy" class="form_container__input">
+                            <input matInput placeholder="Answer" formControlName="option" maxlength="80">
+                        </mat-form-field>
+                        <button *ngIf="pollOptionsValue.length > 2" mat-raised-button color="warn" (click)="removeVoteOption(i)">X</button>
+                    </div>
+                </div>
+            </form>
+            <button mat-raised-button color="primary" (click)="addVoteOption()">Add</button>
+        </div>
+    </div>
+    <div class="form_container__actions">
+        {{pollOptionsValue.length }}/10 possible answers
+        <button mat-raised-button color="basic" (click)="resetForm()">Reset</button>
+    </div>
+</div>

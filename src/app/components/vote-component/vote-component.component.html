@@ -1,0 +1,11 @@
+
+<div class="vote_container">
+    <h1>{{ pollTitle }}</h1>
+    <mat-radio-group [(ngModel)]="voteValue" class="vote_container__radio-group">
+        <mat-radio-button *ngFor="let value of pollOptions" [value]="value" class="vote_container__radio-button">
+            {{ value }}
+        </mat-radio-button>
+    </mat-radio-group>
+    <button *ngIf="voteValue" mat-raised-button color="warn" (click)="setSelectedOption(voteValue)" class="vote_container__vote-button">Vote</button>
+</div>
+
