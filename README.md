@@ -55,7 +55,7 @@ In the project folder:
 
 Or
 
-Run `ng serve -o`. This will automatically open `http://localhost:4200/` and automatically reload if you change any of the source files.
+- Run `ng serve -o`. This will automatically open `http://localhost:4200/` and automatically reload if you change any of the source files.
 
 ## Running unit tests
 
