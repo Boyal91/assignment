@@ -65,4 +65,4 @@ In the project folder:
 
 ## Accessibility
 
-Application is keyboard accessible. You can navigate all fields with `TAB`, `ARROW BUTTON` and `SHIFT + TAB`.
+Application is keyboard accessible. You can navigate all fields with `TAB`, `ARROW BUTTONS` and `SHIFT + TAB`.
